@@ -11,51 +11,60 @@ local create_taglist = function(screen)
 
 	local taglist = wibox.widget {
 		widget = wibox.layout.fixed.horizontal
-
 	}
 
 	for i = 1,9,1
 	do
-		local opc
+		local image_path
+		local top_margin
 		if tags[i].selected
 		then
-			opc = 1.0
+			image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/pressed_button.png"
+			top_magin = 4
 		else
-			opc = 0.1
+			image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/unpressed_button.png"
+			top_magin = 2
 		end
 
 		taglist:add(wibox.widget {
 			{
-				text = tags[i].name,
-				valign = "center",
-				font = "sans 12",
-				opacity = opc,
-				widget = wibox.widget.textbox
+				image = image_path,
+				widget = wibox.widget.imagebox
 			},
-			left = 5,
-			right = 5,
-			widget = wibox.container.margin
+			{
+				{
+					text = tags[i].name,
+					valign = "center",
+					font = "sans 7",
+					opacity = opc,
+					widget = wibox.widget.textbox
+				},
+				top = top_margin,
+				left = 9,
+				widget = wibox.container.margin
+			},
+			widget = wibox.layout.stack
 		})
 
 		tags[i]:connect_signal(
 			"property::selected",
 			function(t)
-				local opc
+				local image_path
+				local top_margin
 				if t.selected
 				then
-					opc = 1.0
+					image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/pressed_button.png"
+					top_margin = 4
 				else
-					if tag_is_empty(t)
-					then
-						opc = 0.1
-					else
-						opc = 0.5
-					end
+					image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/unpressed_button.png"
+					top_margin = 2
 				end
 
 				local all_children = taglist:get_children()
-				local texbox = all_children[i]:get_children()[1]
-				texbox.opacity = opc
+				local image_widget = all_children[i]:get_children()[1]
+				image_widget.image = image_path
+
+				all_children[i]:get_children()[2].top = top_margin
 
 				-- No way this ACTUALLY works
 				taglist:set_visible(false)
