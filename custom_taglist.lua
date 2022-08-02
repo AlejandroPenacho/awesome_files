@@ -10,8 +10,14 @@ local create_taglist = function(screen)
 	local tags = screen.tags
 
 	local taglist = wibox.widget {
-		widget = wibox.layout.fixed.horizontal
+		widget = wibox.layout.fixed.horizontal,
+		spacing = -1
 	}
+
+	taglist:add(wibox.widget {
+		image = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/left.png",
+		widget = wibox.widget.imagebox
+	})
 
 	for i = 1,9,1
 	do
@@ -61,10 +67,10 @@ local create_taglist = function(screen)
 				end
 
 				local all_children = taglist:get_children()
-				local image_widget = all_children[i]:get_children()[1]
+				local image_widget = all_children[i+1]:get_children()[1]
 				image_widget.image = image_path
 
-				all_children[i]:get_children()[2].top = top_margin
+				all_children[i+1]:get_children()[2].top = top_margin
 
 				-- No way this ACTUALLY works
 				taglist:set_visible(false)
@@ -72,6 +78,11 @@ local create_taglist = function(screen)
 			end
 		)
 	end
+
+	taglist:add(wibox.widget {
+		image = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/right.png",
+		widget = wibox.widget.imagebox
+	})
 
 	--[[
 	local children = taglist:get_children()

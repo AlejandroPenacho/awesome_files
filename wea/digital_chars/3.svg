@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1470"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
-   sodipodi:docname="5.svg"
+   sodipodi:docname="3.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.35590942"
-     inkscape:cx="-122.22211"
+     inkscape:cx="-46.36011"
      inkscape:cy="622.34936"
      inkscape:window-width="1364"
      inkscape:window-height="744"
@@ -38,6 +38,19 @@
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
+       id="filter3000"
+       x="-1.185112"
+       y="-0.17173678"
+       width="3.370224"
+       height="1.3434736">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="8.7938224"
+         id="feGaussianBlur3002" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
        id="filter3029"
        x="-1.0080106"
        y="-0.1758445"
@@ -47,6 +60,19 @@
          inkscape:collect="always"
          stdDeviation="7.4796877"
          id="feGaussianBlur3031" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3058"
+       x="-1.0098431"
+       y="-0.17616756"
+       width="3.0196863"
+       height="1.3523351">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.4932858"
+         id="feGaussianBlur3060" />
     </filter>
     <filter
        inkscape:collect="always"
@@ -183,7 +209,8 @@
         </g>
         <g
            id="g3092"
-           inkscape:label="bottom-right">
+           inkscape:label="bottom-right"
+           style="display:inline">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="M 149.05375,257.42145 V 153.21441 h 17.80859 v 104.20704 z"
@@ -210,8 +237,24 @@
              inkscape:label="blur" />
         </g>
         <g
+           id="g3034"
+           inkscape:label="bottom-left"
+           style="display:none">
+          <path
+             style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41.846711,134.20465 17.808593,17.80664 v 84.27734 H 41.846711 V 134.20465"
+             id="path1018-6-4-2"
+             inkscape:label="solid" />
+          <path
+             style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3058)"
+             d="m 41.846711,134.20465 17.808593,17.80664 v 84.27734 H 41.846711 V 134.20465"
+             id="path1018-6-4-2-3"
+             inkscape:label="blur" />
+        </g>
+        <g
            id="g3005"
-           inkscape:label="top-left">
+           inkscape:label="top-left"
+           style="display:none">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="M 41.846711,129.08356 V 26.997622 l 17.808593,17.80664 V 129.08356 H 41.846711"
@@ -221,6 +264,20 @@
              style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3029)"
              d="M 41.846711,129.08356 V 26.997622 L 59.655304,44.804261 V 129.08356 H 41.846711"
              id="path1033-1-4-9-9"
+             inkscape:label="blur" />
+        </g>
+        <g
+           id="g2976"
+           inkscape:label="top-right">
+          <path
+             style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 148.92094,25.009341 h 17.80859 V 147.90191 L 148.92094,130.09332 V 25.009341"
+             id="path1037-8-7-1"
+             inkscape:label="solid" />
+          <path
+             style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3000)"
+             d="m 148.92094,25.009342 h 17.80859 V 147.90191 L 148.92094,130.09332 V 25.009342"
+             id="path1037-8-7-1-0"
              inkscape:label="blur" />
         </g>
       </g>

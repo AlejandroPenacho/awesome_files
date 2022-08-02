@@ -25,7 +25,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.35590942"
-     inkscape:cx="-122.22211"
+     inkscape:cx="-46.36011"
      inkscape:cy="622.34936"
      inkscape:window-width="1364"
      inkscape:window-height="744"
@@ -64,6 +64,19 @@
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
+       id="filter3058"
+       x="-1.0098431"
+       y="-0.17616756"
+       width="3.0196863"
+       height="1.3523351">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.4932858"
+         id="feGaussianBlur3060" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
        id="filter3087"
        x="-0.17211648"
        y="-1.1673414"
@@ -86,6 +99,32 @@
          inkscape:collect="always"
          stdDeviation="7.6259769"
          id="feGaussianBlur3118" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3145"
+       x="-0.17563445"
+       y="-1.0277251"
+       width="1.3512689"
+       height="3.0554503">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.6259775"
+         id="feGaussianBlur3147" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter907"
+       x="-0.17616469"
+       y="-1.0099376"
+       width="1.3523294"
+       height="3.0198752">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.4931644"
+         id="feGaussianBlur909" />
     </filter>
   </defs>
   <g
@@ -141,8 +180,39 @@
          inkscape:label="color"
          style="display:inline">
         <g
+           id="g3150"
+           inkscape:label="top"
+           style="display:none">
+          <path
+             style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="M 61.7764,42.683169 43.969759,24.876529 H 146.05375 v 17.80664 z"
+             id="path979-6-3-5"
+             inkscape:label="solid" />
+          <path
+             style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter907)"
+             d="M 61.7764,42.683169 43.969759,24.876529 H 146.05375 v 17.80664 z"
+             id="path979-6-3-5-3"
+             inkscape:label="blur" />
+        </g>
+        <g
+           id="g3121"
+           inkscape:label="bottom"
+           style="display:none">
+          <path
+             style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41.67093,257.09723 v -17.8086 h 104.20704 v 17.8086 H 41.67093"
+             id="path991-0-0-3"
+             inkscape:label="solid" />
+          <path
+             style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3145)"
+             d="m 41.67093,257.09723 v -17.8086 h 104.20704 v 17.8086 H 41.67093"
+             id="path991-0-0-3-6"
+             inkscape:label="blur" />
+        </g>
+        <g
            id="g3092"
-           inkscape:label="bottom-right">
+           inkscape:label="bottom-right"
+           style="display:inline">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="M 149.05375,257.42145 V 153.21441 h 17.80859 v 104.20704 z"
@@ -169,8 +239,24 @@
              inkscape:label="blur" />
         </g>
         <g
+           id="g3034"
+           inkscape:label="bottom-left"
+           style="display:none">
+          <path
+             style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41.846711,134.20465 17.808593,17.80664 v 84.27734 H 41.846711 V 134.20465"
+             id="path1018-6-4-2"
+             inkscape:label="solid" />
+          <path
+             style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3058)"
+             d="m 41.846711,134.20465 17.808593,17.80664 v 84.27734 H 41.846711 V 134.20465"
+             id="path1018-6-4-2-3"
+             inkscape:label="blur" />
+        </g>
+        <g
            id="g3005"
-           inkscape:label="top-left">
+           inkscape:label="top-left"
+           style="display:inline">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="M 41.846711,129.08356 V 26.997622 l 17.808593,17.80664 V 129.08356 H 41.846711"
