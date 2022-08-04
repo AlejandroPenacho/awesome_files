@@ -1,29 +1,24 @@
 local wibox = require("wibox")
 local gears = require("gears")
 local watch = require("awful.widget.watch")
-local naughty = require("naughty")
 
-local number_to_img = require("penacho-mods.digital_numbers")
+local text_to_digital = require("penacho_mods.utils.digital_screen")
+
+local image_path = "/home/alejandro/.config/awesome/penacho_mods/png/battery/"
 
 
-local battery_widget =
-function()
+local battery_widget = function()
+
 	local widget = wibox.widget {
 		{
 			{
 				{
-					image = "/home/alejandro/.config/awesome/penacho-mods/png/battery.png",
+					image = image_path .. "battery.png",
 					widget = wibox.widget.imagebox
 				},
-				--[[
+				text_to_digital("50"),
 				{
-					text = "0",
-					widget = wibox.widget.textbox
-				},
-				]]
-				number_to_img(50),
-				{
-					image = "/home/alejandro/.config/awesome/penacho-mods/png/battery_discharging.png",
+					image = image_path .. "battery_discharging.png",
 					widget = wibox.widget.imagebox
 				},
 				spacing = 4,
@@ -43,7 +38,6 @@ function()
 		widget = wibox.container.background
 	}
 
-
 	local update_widget = function(l_widget, stdout)
         local charge = 0
         local status
@@ -60,14 +54,14 @@ function()
         end
 
 		-- widget:get_children()[1]:get_children()[1]:get_children()[2].text = tostring(charge)
-		widget:get_children()[1]:get_children()[1]:set(2, number_to_img(charge))
+		widget:get_children()[1]:get_children()[1]:set(2, text_to_digital(tostring(charge)))
 
 		if status == "Discharging" then
 			widget:get_children()[1]:get_children()[1]:get_children()[3].image =
-				"/home/alejandro/.config/awesome/penacho-mods/png/battery_discharging.png"
+				image_path .. "battery_discharging.png"
 		else
 			widget:get_children()[1]:get_children()[1]:get_children()[3].image =
-				"/home/alejandro/.config/awesome/penacho-mods/png/battery_charging.png"
+				image_path .. "battery_charging.png"
 		end
 
 
@@ -76,6 +70,7 @@ function()
     watch("acpi", 5, update_widget, widget)
 
 	return widget
+
 end
 
 return battery_widget

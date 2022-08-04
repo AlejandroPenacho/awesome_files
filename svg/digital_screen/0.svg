@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1470"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
-   sodipodi:docname="3.svg"
+   sodipodi:docname="0.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.35590942"
-     inkscape:cx="-46.36011"
+     inkscape:cx="-81.481406"
      inkscape:cy="622.34936"
      inkscape:window-width="1364"
      inkscape:window-height="744"
@@ -209,8 +209,7 @@
         </g>
         <g
            id="g3092"
-           inkscape:label="bottom-right"
-           style="display:inline">
+           inkscape:label="bottom-right">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="M 149.05375,257.42145 V 153.21441 h 17.80859 v 104.20704 z"
@@ -224,7 +223,8 @@
         </g>
         <g
            id="g3063"
-           inkscape:label="mid">
+           inkscape:label="mid"
+           style="display:none">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="M 61.7764,149.8902 43.969759,132.08356 H 146.93265 L 164.7393,149.8902 H 61.7764"
@@ -238,8 +238,7 @@
         </g>
         <g
            id="g3034"
-           inkscape:label="bottom-left"
-           style="display:none">
+           inkscape:label="bottom-left">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 41.846711,134.20465 17.808593,17.80664 v 84.27734 H 41.846711 V 134.20465"
@@ -253,8 +252,7 @@
         </g>
         <g
            id="g3005"
-           inkscape:label="top-left"
-           style="display:none">
+           inkscape:label="top-left">
           <path
              style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="M 41.846711,129.08356 V 26.997622 l 17.808593,17.80664 V 129.08356 H 41.846711"

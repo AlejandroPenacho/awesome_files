@@ -3,8 +3,9 @@ local wibox = require("wibox")
 local tag_is_empty = function(tag)
 	local clients = tag:clients()
 	return #clients == 0
-
 end
+
+local image_dir = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/taglist/"
 
 local create_taglist = function(screen) 
 	local tags = screen.tags
@@ -15,7 +16,7 @@ local create_taglist = function(screen)
 	}
 
 	taglist:add(wibox.widget {
-		image = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/left.png",
+		image = image_dir .. "left.png",
 		widget = wibox.widget.imagebox
 	})
 
@@ -25,10 +26,10 @@ local create_taglist = function(screen)
 		local top_margin
 		if tags[i].selected
 		then
-			image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/pressed_button.png"
+			image_path = image_dir .. "pressed_button.png"
 			top_magin = 4
 		else
-			image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/unpressed_button.png"
+			image_path = image_dir .. "unpressed_button.png"
 			top_magin = 2
 		end
 
@@ -59,10 +60,10 @@ local create_taglist = function(screen)
 				local top_margin
 				if t.selected
 				then
-					image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/pressed_button.png"
+					image_path = image_dir .. "pressed_button.png"
 					top_margin = 4
 				else
-					image_path = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/unpressed_button.png"
+					image_path = image_dir .. "unpressed_button.png"
 					top_margin = 2
 				end
 
@@ -80,7 +81,7 @@ local create_taglist = function(screen)
 	end
 
 	taglist:add(wibox.widget {
-		image = "/home/alejandro/.config/awesome/penacho-mods/png/taglist/right.png",
+		image = image_dir .. "right.png",
 		widget = wibox.widget.imagebox
 	})
 

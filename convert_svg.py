@@ -2,8 +2,8 @@ import os
 import subprocess
 import hashlib
 
-SOURCE_DIR = "wea/"
-TARGET_DIR = "test/"
+SOURCE_DIR = "svg/"
+TARGET_DIR = "png/"
 
 
 def convert_file(original_path, new_path):
@@ -41,7 +41,7 @@ def get_previous_hashes(target_directory):
 
 def get_current_hashes(source_directory):
     current_hashes = {}
-    walker = os.walk("wea")
+    walker = os.walk(SOURCE_DIR)
 
     for (directory, _, files) in walker:
         split_path = directory.split("/", 1)
@@ -117,7 +117,6 @@ def get_diff(prev_hashes, current_hashes):
     print(f"Files removed:         {n_removed}")
 
     return diff
-
 
 def perform_transformations(source_dir, target_dir, diff):
     for filename in diff["new"]:
