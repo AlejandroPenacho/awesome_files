@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="94mm"
+   width="113mm"
    height="34mm"
-   viewBox="0 0 94 34"
+   viewBox="0 0 113 34"
    version="1.1"
    id="svg934"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
-   sodipodi:docname="pressed_button.svg"
+   sodipodi:docname="base.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.50333194"
-     inkscape:cx="-84.43732"
-     inkscape:cy="2.9801407"
+     inkscape:cx="144.04013"
+     inkscape:cy="-24.834506"
      inkscape:window-width="1364"
      inkscape:window-height="744"
      inkscape:window-x="0"
@@ -170,7 +170,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-70.908324)">
+     transform="translate(24.87085)">
     <path
        id="rect303-3"
        style="fill:#854400;fill-opacity:1;stroke:#000000;stroke-width:1.06176;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -311,22 +311,10 @@
       </g>
     </g>
     <g
-       id="g1701"
-       inkscape:label="unpressed_button"
-       transform="translate(-13.229169)">
-      <path
-         id="rect398-6"
-         style="fill:#1a395d;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-         d="m 23.654859,6.4588325 c -7.212906,0 -13.019877,5.8069725 -13.019877,13.0198785 v 14.070975 h 56.46322 V 19.478711 c 0,-7.212906 -5.806971,-13.0198785 -13.019877,-13.0198785 z" />
-      <path
-         id="rect398"
-         style="fill:#2b5e99;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-         d="m 23.654859,3.520206 c -7.212906,0 -13.019877,5.806971 -13.019877,13.019877 v 14.070975 h 56.46322 V 16.540083 c 0,-7.212906 -5.806971,-13.019877 -13.019877,-13.019877 z" />
-    </g>
-    <g
        id="g1705"
        inkscape:label="pressed_button"
-       transform="translate(10.583334)">
+       transform="translate(10.583334)"
+       style="display:none">
       <path
          id="rect398-3"
          style="fill:#1a395d;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"

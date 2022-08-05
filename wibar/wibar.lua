@@ -4,8 +4,10 @@ local awful = require("awful")
 
 local battery_widget = require("penacho_mods.wibar.battery_widget")
 local custom_taglist = require("penacho_mods.wibar.custom_taglist")
+local pomodoro = require("penacho_mods.wibar.pomodoro")
 
 
+--[[
 local function draw_in_box(wdg, top_margin, right_margin, bottom_margin, left_margin)
 	return {
 		{
@@ -23,17 +25,23 @@ local function draw_in_box(wdg, top_margin, right_margin, bottom_margin, left_ma
 		widget = wibox.container.background
 	}
 end
+]]
 
-local create_wibar = function(screen)
+local create_wibar = function(screen, textclock)
 	local wibar = awful.wibar({ height = 22, position = "bottom", bg="nil", screen=screen })
 
 	wibar:setup {
 		layout = wibox.layout.align.horizontal,
 		{ 	-- Left widgets
 			layout = wibox.layout.fixed.horizontal,
+			spacing = -1,
 			battery_widget(),
 			custom_taglist(screen),
-			draw_in_box(awful.widget.watch('pomodoro gettime', 1), 0, 8, 0, 8)
+			pomodoro(),
+			{
+				widget = wibox.widget.imagebox,
+				image = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/right_top.png"
+			}
 		},
 
 		{ -- Center widgets
@@ -42,6 +50,9 @@ local create_wibar = function(screen)
 
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
+			spacing = -1,
+			textclock,
+			wibox.widget.textbox(" "),
 			screen.mylayoutbox,
 			wibox.widget.textbox(" ")
 		}

@@ -12,13 +12,8 @@ local create_taglist = function(screen)
 
 	local taglist = wibox.widget {
 		widget = wibox.layout.fixed.horizontal,
-		spacing = -1
+		spacing = -14,
 	}
-
-	taglist:add(wibox.widget {
-		image = image_dir .. "left.png",
-		widget = wibox.widget.imagebox
-	})
 
 	for i = 1,9,1
 	do
@@ -34,25 +29,30 @@ local create_taglist = function(screen)
 		end
 
 		taglist:add(wibox.widget {
+			widget = wibox.layout.stack,
 			{
-				image = image_path,
-				widget = wibox.widget.imagebox
+				widget = wibox.widget.imagebox,
+				id = "image",
+				image = image_path
 			},
 			{
+				id = "text",
 				{
-					text = tags[i].name,
-					valign = "center",
-					font = "sans 7",
-					opacity = opc,
-					widget = wibox.widget.textbox
+					{
+						text = tags[i].name,
+						valign = "center",
+						font = "sans 9",
+						opacity = opc,
+						widget = wibox.widget.textbox
+					},
+					fg = "#E6AACE",
+					widget = wibox.container.background
 				},
 				top = top_margin,
-				left = 9,
+				left = 18,
 				widget = wibox.container.margin
-			},
-			widget = wibox.layout.stack
+			}
 		})
-
 		tags[i]:connect_signal(
 			"property::selected",
 			function(t)
@@ -68,10 +68,10 @@ local create_taglist = function(screen)
 				end
 
 				local all_children = taglist:get_children()
-				local image_widget = all_children[i+1]:get_children()[1]
+				local image_widget = all_children[i]:get_children()[1]
 				image_widget.image = image_path
 
-				all_children[i+1]:get_children()[2].top = top_margin
+				all_children[i]:get_children()[2].top = top_margin
 
 				-- No way this ACTUALLY works
 				taglist:set_visible(false)
@@ -79,11 +79,6 @@ local create_taglist = function(screen)
 			end
 		)
 	end
-
-	taglist:add(wibox.widget {
-		image = image_dir .. "right.png",
-		widget = wibox.widget.imagebox
-	})
 
 	--[[
 	local children = taglist:get_children()

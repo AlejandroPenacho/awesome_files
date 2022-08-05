@@ -6,35 +6,50 @@ local text_to_digital = require("penacho_mods.utils.digital_screen")
 
 local image_path = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/battery/"
 
-
 local battery_widget = function()
 	local widget = wibox.widget {
+		widget = wibox.layout.stack,
 		{
-			{
-				{
-					image = image_path .. "battery.png",
-					widget = wibox.widget.imagebox
-				},
-				text_to_digital("50"),
-				{
-					image = image_path .. "battery_discharging.png",
-					widget = wibox.widget.imagebox
-				},
-				spacing = 4,
-				widget = wibox.layout.fixed.horizontal
-			},
-			top = 4,
-			bottom = 4,
-			left = 4,
-			right = 4,
-			widget = wibox.container.margin
+			image = image_path .. "base.png",
+			widget = wibox.widget.imagebox
 		},
-		shape = function(cr, w, h) gears.shape.rounded_rect(cr,w,h,5) end,
-		bg = "#000000",
-		fg = "#FF0000",
-		shape_border_width = 1,
-		shape_border_color = "#FFFFFF",
-		widget = wibox.container.background
+		{
+			widget = wibox.container.margin,
+			top = 2,
+			bottom = 3,
+			left = 2,
+			{
+				widget = wibox.container.background,
+				shape = function(cr, w, h) gears.shape.rounded_rect(cr,40,h,5) end,
+				bg = "#000000",
+				fg = "#FF0000",
+				shape_border_width = 1,
+				shape_border_color = "#FFFFFF",
+				{
+					widget = wibox.container.margin,
+					top = 2,
+					bottom = 2,
+					left = 6,
+					right = 6,
+					{
+						widget = wibox.layout.fixed.horizontal,
+						id = "digital_screen",
+						spacing = 4,
+						{
+							image = image_path .. "battery.png",
+							widget = wibox.widget.imagebox
+						},
+						text_to_digital("50")
+						--[[
+						{
+							image = image_path .. "battery_discharging.png",
+							widget = wibox.widget.imagebox
+						}
+						]]
+					}
+				}
+			}
+		}
 	}
 
 	local update_widget = function(l_widget, stdout)
@@ -52,14 +67,17 @@ local battery_widget = function()
             end
         end
 
-		-- widget:get_children()[1]:get_children()[1]:get_children()[2].text = tostring(charge)
-		widget:get_children()[1]:get_children()[1]:set(2, text_to_digital(tostring(charge)))
+		if charge == 100 then
+			charge = "FC"
+		end
+
+		widget:get_children_by_id("digital_screen")[1]:set(2, text_to_digital(tostring(charge)))
 
 		if status == "Discharging" then
-			widget:get_children()[1]:get_children()[1]:get_children()[3].image =
-				image_path .. "battery_discharging.png"
+			widget:get_children_by_id("digital_screen")[1]:get_children()[1].image =
+				image_path .. "battery.png"
 		else
-			widget:get_children()[1]:get_children()[1]:get_children()[3].image =
+			widget:get_children_by_id("digital_screen")[1]:get_children()[1].image =
 				image_path .. "battery_charging.png"
 		end
 
