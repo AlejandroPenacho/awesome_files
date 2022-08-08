@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="94mm"
+   width="86mm"
    height="34mm"
-   viewBox="0 0 94 34"
+   viewBox="0 0 86 34"
    version="1.1"
    id="svg934"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.50333194"
-     inkscape:cx="-84.43732"
-     inkscape:cy="2.9801407"
+     inkscape:zoom="0.71181885"
+     inkscape:cx="-247.95634"
+     inkscape:cy="35.823721"
      inkscape:window-width="1364"
      inkscape:window-height="744"
      inkscape:window-x="0"
@@ -170,7 +170,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-70.908324)">
+     transform="translate(-86.254167)">
     <path
        id="rect303-3"
        style="fill:#854400;fill-opacity:1;stroke:#000000;stroke-width:1.06176;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -329,11 +329,11 @@
        transform="translate(10.583334)">
       <path
          id="rect398-3"
-         style="fill:#1a395d;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         style="fill:#1a395d;fill-opacity:1;stroke:#030303;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          d="m 90.874713,3.520206 c -7.212906,0 -13.019877,5.8069714 -13.019877,13.019877 V 30.611058 H 134.31806 V 16.540083 c 0,-7.2129056 -5.80697,-13.019877 -13.01988,-13.019877 z" />
       <path
          id="rect398-3-7"
-         style="fill:#2b5e99;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         style="fill:#2b5e99;fill-opacity:1;stroke:#030303;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          d="m 90.721086,6.3799807 c -7.212906,0 -13.019877,5.8069713 -13.019877,13.0198773 V 33.470833 H 134.16443 V 19.399858 c 0,-7.212906 -5.80697,-13.0198773 -13.01988,-13.0198773 z" />
       <rect
          style="fill:#55ff6e;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"

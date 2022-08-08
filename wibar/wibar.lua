@@ -5,34 +5,24 @@ local awful = require("awful")
 local battery_widget = require("penacho_mods.wibar.battery_widget")
 local custom_taglist = require("penacho_mods.wibar.custom_taglist")
 local pomodoro = require("penacho_mods.wibar.pomodoro")
+local my_textclock = require("penacho_mods.wibar.text_clock")
+local my_layout = require("penacho_mods.wibar.layout")
 
-
---[[
-local function draw_in_box(wdg, top_margin, right_margin, bottom_margin, left_margin)
-	return {
-		{
-			wdg,
-			top = top_margin,
-			right = right_margin,
-			bottom = bottom_margin,
-			left = left_margin,
-			widget = wibox.container.margin
-		},
-		bg = "black",
-		shape_border_width = 1,
-		shape_border_color = "white",
-		shape = gears.shape.rounded_bar,
-		widget = wibox.container.background
-	}
-end
-]]
 
 local create_wibar = function(screen, textclock)
-	local wibar = awful.wibar({ height = 22, position = "bottom", bg="nil", screen=screen })
+	local wibar = awful.wibar({
+		height = 22,
+		position = "bottom",
+		bg="nil",
+		screen=screen
+	})
+
+	local taglist = custom_taglist(screen)
 
 	wibar:setup {
 		layout = wibox.layout.align.horizontal,
 		{ 	-- Left widgets
+			id = "left",
 			layout = wibox.layout.fixed.horizontal,
 			spacing = -1,
 			battery_widget(),
@@ -50,13 +40,41 @@ local create_wibar = function(screen, textclock)
 
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
-			spacing = -1,
-			textclock,
+			spacing = -3,
+			{
+				widget = wibox.widget.imagebox,
+				image = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/left_top.png"
+			},
+			my_textclock(),
 			wibox.widget.textbox(" "),
-			screen.mylayoutbox,
+			my_layout(),
 			wibox.widget.textbox(" ")
 		}
 	}
+
+
+	local tags = screen.tags
+	for i=1,9,1 do
+		tags[i]:connect_signal(
+			"property::selected",
+			function(t)
+				wibar:get_children_by_id("left")[1]:set(
+					2,
+					custom_taglist(screen)
+				)
+			end
+		)
+		tags[i]:connect_signal(
+			"property::icon",
+			function(t)
+				wibar:get_children_by_id("left")[1]:set(
+					2,
+					custom_taglist(screen)
+				)
+			end
+		)
+	end
+
 	return wibar
 end
 

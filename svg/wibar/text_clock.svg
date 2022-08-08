@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="196mm"
+   height="34mm"
+   viewBox="0 0 196 34"
+   version="1.1"
+   id="svg934"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   sodipodi:docname="text_clock.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview936"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.50333194"
+     inkscape:cx="-0.99338023"
+     inkscape:cy="205.62971"
+     inkscape:window-width="1364"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs931" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(24.87085)">
+    <path
+       id="rect303-3"
+       style="fill:#854400;fill-opacity:1;stroke:#000000;stroke-width:1.06176;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M -33.744997,3.520206 V 33.470833 H 245.61841 A 14.975443,14.975443 0 0 0 260.59372,18.495519 14.975443,14.975443 0 0 0 245.61841,3.520206 Z" />
+    <path
+       id="rect303-3-5"
+       style="fill:#ff8400;fill-opacity:1;stroke:#000000;stroke-width:1.06176;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M -33.744989,0.6603843 V 30.611011 H 245.6184 A 14.975443,14.975443 0 0 0 260.59371,15.635697 14.975443,14.975443 0 0 0 245.6184,0.6603843 Z" />
+  </g>
+</svg>

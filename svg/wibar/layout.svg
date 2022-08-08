@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="160mm"
+   width="41mm"
    height="34mm"
-   viewBox="0 0 160 34"
+   viewBox="0 0 41 34"
    version="1.1"
    id="svg934"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
-   sodipodi:docname="base.svg"
+   sodipodi:docname="layout.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.50333194"
-     inkscape:cx="44.70211"
-     inkscape:cy="-24.834506"
+     inkscape:cx="153.97394"
+     inkscape:cy="-56.622673"
      inkscape:window-width="1364"
      inkscape:window-height="744"
      inkscape:window-x="0"
@@ -309,6 +309,19 @@
              id="path1037-8-3-9" />
         </g>
       </g>
+    </g>
+    <g
+       id="g1701"
+       inkscape:label="unpressed_button"
+       transform="translate(77.649559,-0.0788518)">
+      <path
+         id="rect398-6"
+         style="fill:#1a395d;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 23.654859,6.4588325 c -7.212906,0 -13.019877,5.8069725 -13.019877,13.0198785 v 14.070975 h 56.46322 V 19.478711 c 0,-7.212906 -5.806971,-13.0198785 -13.019877,-13.0198785 z" />
+      <path
+         id="rect398"
+         style="fill:#2b5e99;fill-opacity:1;stroke:#030303;stroke-width:0.781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 23.654859,3.520206 c -7.212906,0 -13.019877,5.806971 -13.019877,13.019877 v 14.070975 h 56.46322 V 16.540083 c 0,-7.212906 -5.806971,-13.019877 -13.019877,-13.019877 z" />
     </g>
     <g
        id="g1705"
