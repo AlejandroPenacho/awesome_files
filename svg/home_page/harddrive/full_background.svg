@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="140mm"
+   height="220mm"
+   viewBox="0 0 140 220"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   sodipodi:docname="full_background.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.5264941"
+     inkscape:cx="303.89704"
+     inkscape:cy="401.7139"
+     inkscape:window-width="1364"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#803500;fill-opacity:1;stroke:#2b533b;stroke-width:0.777963;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers fill stroke;stroke-opacity:1"
+       id="rect308"
+       width="136.92891"
+       height="182.41792"
+       x="1.485253"
+       y="1.1932837"
+       ry="25.007198" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#2b533b;stroke-width:0.92553;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers fill stroke;stroke-opacity:1"
+       id="rect308-3"
+       width="136.86914"
+       height="201.74754"
+       x="1.515138"
+       y="16.698175"
+       ry="27.657047" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#2b533b;stroke-width:0.837674;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers fill stroke;stroke-opacity:1"
+       id="path2553"
+       sodipodi:type="arc"
+       sodipodi:cx="69.935387"
+       sodipodi:cy="26.18261"
+       sodipodi:rx="61.999878"
+       sodipodi:ry="13.118437"
+       sodipodi:start="3.6832356"
+       sodipodi:end="5.7418542"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="m 16.809996,19.419472 a 61.999878,13.118437 0 0 1 53.135058,-6.355299 61.999878,13.118437 0 0 1 53.125686,6.358805" />
+  </g>
+</svg>

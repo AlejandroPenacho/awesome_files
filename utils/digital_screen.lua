@@ -18,6 +18,14 @@ local text_to_screen = function(text)
 	for i = 1, #text do
 		local c = text:sub(i,i)
 
+		if c == " " then
+			c = "empty"
+		end
+
+		if c == "." then
+			c = "dot"
+		end
+
 		output:add(char_to_screen(c))
 	end
 

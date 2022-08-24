@@ -2,6 +2,7 @@ local wibox = require("wibox")
 local naughty = require("naughty")
 local gears = require("gears")
 local watch = require("awful.widget.watch")
+local awful = require("awful")
 
 local text_to_digital = require("penacho_mods.utils.digital_screen")
 
@@ -23,7 +24,7 @@ local battery_widget = function()
 			{
 				widget = wibox.container.background,
 				-- shape = function(cr, w, h) gears.shape.rounded_rect(cr,40,h,5) end,
-				shape = function(cr, w, h) gears.shape.rounded_rect(cr,80,h,5) end,
+				shape = function(cr, w, h) gears.shape.rounded_rect(cr,85,h,5) end,
 				bg = "#000000",
 				fg = "#FF0000",
 				shape_border_width = 1,
@@ -57,6 +58,22 @@ local battery_widget = function()
 			}
 		}
 	}
+
+	widget:get_children_by_id("digital_screen")[1]:connect_signal(
+		"button::press",
+		function(something, lx, ly, button)
+			if button == 4 then
+				awful.spawn("amixer -q set Master 2%+")
+			end
+			if button == 5 then
+				awful.spawn("amixer -q set Master 2%-")
+			end
+			
+			for i=1,#wibar_volume_timer,1 do
+				wibar_volume_timer[i]:emit_signal("timeout")
+			end
+		end
+	)
 
 	local update_battery_widget = function(l_widget, stdout)
         local charge = 0
@@ -113,7 +130,9 @@ local battery_widget = function()
 
     watch("acpi", 5, update_battery_widget, widget)
 
-   	_, wibar_volume_timer = watch("/home/alejandro/.config/awesome/penacho_mods/scripts/get_volume.sh", 5, update_volume_widget, widget)
+   	_, local_wibar_volume_timer = watch("/home/alejandro/.config/awesome/penacho_mods/scripts/get_volume.sh", 5, update_volume_widget, widget)
+
+	wibar_volume_timer[#wibar_volume_timer + 1] = local_wibar_volume_timer
 
 	return widget
 end

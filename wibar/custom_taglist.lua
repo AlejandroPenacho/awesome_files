@@ -1,9 +1,6 @@
 local wibox = require("wibox")
+local naughty = require("naughty")
 
-local tag_is_empty = function(tag)
-	local clients = tag:clients()
-	return #clients == 0
-end
 
 local image_dir = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/taglist/"
 
@@ -15,6 +12,10 @@ local filter_tag = function(tag)
 	local clients = tag:clients()
 
 	if #clients ~= 0 then
+		return true
+	end
+
+	if tag.icon ~= nil then
 		return true
 	end
 
@@ -44,7 +45,7 @@ local create_taglist = function(screen)
 				top_margin = 2
 			end
 
-			taglist:add(wibox.widget {
+			local widget = wibox.widget {
 				widget = wibox.layout.stack,
 				{
 					widget = wibox.widget.imagebox,
@@ -81,9 +82,21 @@ local create_taglist = function(screen)
 						},
 					},
 				}
-			})
-		end
+			}
+			taglist:add(widget)
 
+			widget:connect_signal("button::press",
+				function(something,lx,ly,button)
+					if button == 1 then
+						tags[i]:view_only()
+					end
+
+					if button == 3 then
+						mytagiconmenu:show()
+					end
+				end
+			)
+		end
 	end
 
 	return taglist
