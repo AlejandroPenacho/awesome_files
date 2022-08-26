@@ -25,37 +25,49 @@ local background_box = wibox({
 })
 
 local ram_box = wibox({
-	widget = ram_widget(),
-    x = 200,
-    y = 50,
+	widget = ram_widget(280, 220),
+    x = 245,
+    y = 70,
     width = 280,
-    height = 220,
+    height = 170,
     bg = "#00000000",
     visible = true,
 	opacity=1.0
 })
 
 local cpu_box = wibox({
-	widget = cpu_widget(),
-    x = 30,
-    y = 300,
-    width = 260,
-    height = 280,
+	widget = cpu_widget(220),
+    x = 50,
+    y = 370,
+    width = 220,
+    height = 220,
     bg = "#00000000",
     visible = true,
 	opacity=1.0
 })
 
 local harddrive_box = wibox({
-	widget = harddrive_widget(),
-	x = 30,
-	y = 50,
-	width = 180,
+	widget = harddrive_widget(150, 220),
+	x = 50,
+	y = 70,
+	width = 150,
 	height = 220,
 	bg = "#00000000",
 	visible = true,
 	opacity = 1.0
 })
 
+local white_stain = wibox({
+	widget = wibox.widget {
+		widget = wibox.widget.imagebox,
+		image = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/white_stain.png"
+	},
+    x = 0,
+    y = 0,
+	bg="#00000000",
+    width = 1366,
+    height = 768,
+    visible = true
+})
 
-return {background_box, harddrive_box, cpu_box, ram_box }
+return {background_box, harddrive_box, cpu_box, ram_box, white_stain }

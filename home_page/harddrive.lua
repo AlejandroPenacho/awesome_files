@@ -26,53 +26,60 @@ local process_memory = function(kbytes)
 end
 
 
-local create_harddrive = function()
+local create_harddrive = function(width, height)
+	local disk_size = 0.5 * height
+	local used_size = 0.15 * height
+	local available_size = 0.15 * height
+	local vertical_margin = 0.1 * height
+
+	local vertical_single_margin = vertical_margin / 4
+
 	local widget = wibox.widget {
-		widget = wibox.container.margin,
-		margins = 15,
+		widget = wibox.container.background,
+		shape = function(cr, w, h) return gears.shape.rounded_rect(cr,w,h,15) end,
+		shape_border_width = 4,
+		shape_border_color = "#FF0000",
 		{
-			widget = wibox.container.background,
-			shape = function(cr, w, h) return gears.shape.rounded_rect(cr,w,h,8) end,
-			shape_border_width = 4,
-			shape_border_color = "#FF0000",
+			widget = wibox.container.margin,
+			left = width*0.1,
+			right = width*0.1,
+			top = vertical_single_margin,
+			bottom = vertical_single_margin,
 			{
-				widget = wibox.container.margin,
-				margins = 6,
+				widget = wibox.layout.fixed.vertical,
+				id = "main_column",
+				spacing = vertical_single_margin,
 				{
-					widget = wibox.layout.fixed.vertical,
-					id = "main_column",
-					spacing = 3,
+					widget = wibox.widget.imagebox,
+					resize = true,
+					image = arc_path .. "9_12.png"
+				},
+				{
+					widget = wibox.layout.fixed.horizontal,
+					spacing = 8,
+					forced_height = used_size,
+					{
+						widget = wibox.widget.textbox,
+						text = " "
+					},
+					text_to_digital("1.8"),
 					{
 						widget = wibox.widget.imagebox,
-						image = arc_path .. "9_12.png"
-					},
+						image = arc_path .. "used.png"
+					}
+				},
+				{
+					widget = wibox.layout.fixed.horizontal,
+					spacing = 8,
+					forced_height = available_size,
 					{
-						widget = wibox.layout.fixed.horizontal,
-						spacing = 8,
-						forced_height = 25,
-						{
-							widget = wibox.widget.textbox,
-							text = " "
-						},
-						text_to_digital("1.8"),
-						{
-							widget = wibox.widget.imagebox,
-							image = arc_path .. "used.png"
-						}
+						widget = wibox.widget.textbox,
+						text = " "
 					},
+					text_to_digital("24"),
 					{
-						widget = wibox.layout.fixed.horizontal,
-						spacing = 8,
-						forced_height = 25,
-						{
-							widget = wibox.widget.textbox,
-							text = " "
-						},
-						text_to_digital("24"),
-						{
-							widget = wibox.widget.imagebox,
-							image = arc_path .. "free.png"
-						}
+						widget = wibox.widget.imagebox,
+						image = arc_path .. "free.png"
 					}
 				}
 			}
@@ -128,29 +135,5 @@ local create_harddrive = function()
 	return widget
 end
 
-local create_harddrive_screen = function()
 
-	local widget = wibox.widget {
-		widget = wibox.layout.stack,
-		{
-			widget = wibox.widget.imagebox,
-			image = image_path .. "full_background.png"
-		},
-		{
-			widget = wibox.container.margin,
-			top = 20,
-			left = 0,
-			right = 40,
-			create_harddrive()
-		},
-		{
-			widget = wibox.widget.imagebox,
-			image = image_path .. "white_stain.png"
-		}
-	}
-
-	return widget
-end
-
-
-return create_harddrive_screen
+return create_harddrive

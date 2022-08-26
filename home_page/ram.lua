@@ -21,12 +21,15 @@ local process_memory = function(kbytes)
 	return { math.floor(gigadecabytes) / 10, "G" }
 end
 
-local create_ram = function()
+local create_ram = function(width, height)
+	local chip_base_ratio = 19/45
+
+
 	local widget = wibox.widget {
 		widget = wibox.layout.fixed.vertical,
 		{
 			widget = wibox.layout.stack,
-			forced_height = 100,
+			forced_height = width*chip_base_ratio,
 			{
 				widget = wibox.widget.imagebox,
 				image = image_path .. "background.png"
@@ -34,9 +37,9 @@ local create_ram = function()
 			{
 				widget = wibox.container.margin,
 				id = "chip_margin_widget",
-				left = 32,
-				top = 20,
-				bottom = 27,
+				left = width * 0.105,
+				top = height * 0.1,
+				bottom = height * 0.13,
 				{
 					widget = wibox.layout.fixed.horizontal,
 					{
@@ -66,7 +69,7 @@ local create_ram = function()
 			widget = wibox.layout.fixed.horizontal,
 			id = "data_row",
 			spacing = 7,
-			forced_height = 30,
+			forced_height = 37,
 			{
 				widget = wibox.widget.textbox,
 				text = "   "
@@ -200,28 +203,4 @@ local create_ram = function()
 	return widget
 end
 
-local create_ram_screen = function()
-	
-	local widget = wibox.widget {
-		widget = wibox.layout.stack,
-		{
-			widget = wibox.widget.imagebox,
-			image = image_path .. "full_background.png"
-		},
-		{
-			widget = wibox.container.margin,
-			top = 50,
-			left = 10,
-			right = 20,
-			create_ram()
-		},
-		{
-			widget = wibox.widget.imagebox,
-			image = image_path .. "white_stain.png"
-		}
-	}
-
-	return widget
-end
-
-return create_ram_screen
+return create_ram

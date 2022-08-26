@@ -4,96 +4,102 @@ local naughty = require("naughty")
 
 local text_to_digital = require("penacho_mods.utils.digital_screen")
 
-local arc_image_dir = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/circular/"
+local arc_image_path = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/cpu/circular/"
 local image_path = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/cpu/"
 
-local top_margin = 22
-local left_margin = 17
-local bottom_margin = 22
+local create_cpu = function(size)
 
-local create_cpu = function()
+	local top_text_margin = 0.125*size
+	local bottom_text_margin = 0.125*size
+	local left_text_margin = 0.112*size
+
+	local minor_vertical_margin = 0.1*size
+	local major_vertical_margin = 0.5*size
+	local minor_lateral_margin = 0.1*size
+	local major_lateral_margin = 0.5*size
+
 	local widget = wibox.widget {
 		widget = wibox.layout.stack,
 		{
 			widget = wibox.widget.imagebox,
-			image = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/cpu.png"
+			image = image_path .. "cpu.png"
 		},
 		{
 			widget = wibox.container.margin,
-			top = 33,
-			bottom = 140,
-			left = 33,
+			top = minor_vertical_margin,
+			bottom = major_vertical_margin,
+			left = minor_lateral_margin,
 			{
 				widget = wibox.layout.stack,
 				{
 					widget = wibox.widget.imagebox,
-					image = arc_image_dir .. "0_24.png"
+					image = arc_image_path .. "0_24.png"
 				},
 				{
 					widget = wibox.container.margin,
-					top = top_margin,
-					left = left_margin,
-					bottom = bottom_margin,
+					top = top_text_margin,
+					left = left_text_margin,
+					bottom = bottom_text_margin,
 					text_to_digital("23")
 				}
 			}
 		},
 		{
 			widget = wibox.container.margin,
-			top = 33,
-			bottom = 140,
-			left = 118,
+			top = minor_vertical_margin,
+			bottom = major_vertical_margin,
+			left = major_lateral_margin,
 			{
 				widget = wibox.layout.stack,
 				{
 					widget = wibox.widget.imagebox,
-					image = arc_image_dir .. "0_24.png"
+					image = arc_image_path .. "0_24.png"
 				},
 				{
 					widget = wibox.container.margin,
-					top = top_margin,
-					left = left_margin,
-					bottom = bottom_margin,
+					top = top_text_margin,
+					left = left_text_margin,
+					bottom = bottom_text_margin,
 					text_to_digital("23")
 				}
 			}
 		},
 		{
 			widget = wibox.container.margin,
-			top = 115,
-			bottom = 58,
-			left = 33,
+			top = major_vertical_margin,
+			bottom = minor_vertical_margin,
+			left = minor_lateral_margin,
 			{
 				widget = wibox.layout.stack,
 				{
 					widget = wibox.widget.imagebox,
-					image = arc_image_dir .. "0_24.png"
+					image = arc_image_path .. "0_24.png"
 				},
 				{
 					widget = wibox.container.margin,
-					top = top_margin,
-					left = left_margin,
-					bottom = bottom_margin,
+					top = top_text_margin,
+					left = left_text_margin,
+					bottom = bottom_text_margin,
 					text_to_digital("23")
 				}
 			}
 		},
 		{
 			widget = wibox.container.margin,
-			top = 115,
-			bottom = 58,
-			left = 118,
+			top = major_vertical_margin,
+			bottom = minor_vertical_margin,
+			left = major_lateral_margin,
 			{
 				widget = wibox.layout.stack,
 				{
 					widget = wibox.widget.imagebox,
-					image = arc_image_dir .. "0_24.png"
+					image = arc_image_path .. "0_24.png"
 				},
 				{
 					widget = wibox.container.margin,
-					top = top_margin,
-					left = left_margin,
-					bottom = bottom_margin,
+					top = top_text_margin,
+					left = left_text_margin,
+					bottom = bottom_text_margin,
 					text_to_digital("23")
 				}
 			}
@@ -130,7 +136,7 @@ local create_cpu = function()
 						text_number = "99"
 					end
 
-					local arc_image =  arc_image_dir .. n_sections .. "_24.png"
+					local arc_image =  arc_image_path .. n_sections .. "_24.png"
 
 					local cpu_stack= widget:get_children()[cpu_index+1].widget
 
@@ -153,27 +159,4 @@ local create_cpu = function()
 	return widget
 end
 
-local create_cpu_screen = function()
-	local widget = wibox.widget {
-		widget = wibox.layout.stack,
-		{
-			widget = wibox.widget.imagebox,
-			image = image_path .. "full_background.png"
-		},
-		{
-			widget = wibox.container.margin,
-			top = 30,
-			left = 10,
-			right = 20,
-			create_cpu()
-		},
-		{
-			widget = wibox.widget.imagebox,
-			image = image_path .. "white_stain.png"
-		}
-	}
-
-	return widget
-end
-
-return create_cpu_screen
+return create_cpu
