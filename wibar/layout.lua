@@ -14,32 +14,19 @@ local get_layout = function()
 	))
 
 	local widget = wibox.widget {
-		widget = wibox.layout.stack,
-		{
-			widget = wibox.widget.imagebox,
-			image = image_path .. "layout.png"
-		},
+		widget = wibox.container.background,
+		shape = function(cr, w, h) gears.shape.rounded_rect(cr,w,h,5) end,
+		bg = "#000000",
+		fg = "#FF0000",
+		shape_border_width = 1,
+		shape_border_color = "#FFFFFF",
 		{
 			widget = wibox.container.margin,
-			top = 2,
-			bottom = 3,
-			left = 2,
-			{
-				widget = wibox.container.background,
-				shape = function(cr, w, h) gears.shape.rounded_rect(cr,20,h,5) end,
-				bg = "#000000",
-				fg = "#FF0000",
-				shape_border_width = 1,
-				shape_border_color = "#FFFFFF",
-				{
-					widget = wibox.container.margin,
-					top = 1,
-					bottom = 1,
-					left = 3,
-					right = 3,
-					layout
-				}
-			}
+			top = 1,
+			bottom = 1,
+			left = 3,
+			right = 3,
+			layout
 		}
 	}
 

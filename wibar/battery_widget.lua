@@ -6,55 +6,40 @@ local awful = require("awful")
 
 local text_to_digital = require("penacho_mods.utils.digital_screen")
 
-local battery_path = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/battery/"
-local volume_path = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/volume/"
+local icon_path = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/bat_and_vol/"
 
 local battery_widget = function()
 	local widget = wibox.widget {
-		widget = wibox.layout.stack,
-		{
-			image = battery_path .. "base.png",
-			widget = wibox.widget.imagebox
-		},
+		widget = wibox.container.background,
+		shape = function(cr, w, h) gears.shape.rounded_rect(cr,w,h,5) end,
+		bg = "#000000",
+		fg = "#FF0000",
+		shape_border_width = 1,
+		shape_border_color = "#FFFFFF",
 		{
 			widget = wibox.container.margin,
-			top = 2,
-			bottom = 3,
-			left = 2,
+			top = 1,
+			bottom = 1,
+			left = 6,
+			right = 6,
 			{
-				widget = wibox.container.background,
-				-- shape = function(cr, w, h) gears.shape.rounded_rect(cr,40,h,5) end,
-				shape = function(cr, w, h) gears.shape.rounded_rect(cr,85,h,5) end,
-				bg = "#000000",
-				fg = "#FF0000",
-				shape_border_width = 1,
-				shape_border_color = "#FFFFFF",
+				widget = wibox.layout.fixed.horizontal,
+				id = "digital_screen",
+				spacing = 4,
 				{
-					widget = wibox.container.margin,
-					top = 2,
-					bottom = 2,
-					left = 6,
-					right = 6,
-					{
-						widget = wibox.layout.fixed.horizontal,
-						id = "digital_screen",
-						spacing = 4,
-						{
-							image = battery_path .. "battery.png",
-							widget = wibox.widget.imagebox
-						},
-						text_to_digital("50"),
-						{
-							text = " ",
-							widget = wibox.widget.textbox
-						},
-						{
-							image = volume_path .. "volume.png",
-							widget = wibox.widget.imagebox
-						},
-						text_to_digital("50")
-					}
-				}
+					image = icon_path .. "battery.png",
+					widget = wibox.widget.imagebox
+				},
+				text_to_digital("50"),
+				{
+					text = " ",
+					widget = wibox.widget.textbox
+				},
+				{
+					image = icon_path .. "volume.png",
+					widget = wibox.widget.imagebox
+				},
+				text_to_digital("50")
 			}
 		}
 	}
@@ -103,10 +88,10 @@ local battery_widget = function()
 
 		if status == "Discharging" then
 			widget:get_children_by_id("digital_screen")[1]:get_children()[1].image =
-				battery_path .. "battery.png"
+				icon_path .. "battery.png"
 		else
 			widget:get_children_by_id("digital_screen")[1]:get_children()[1].image =
-				battery_path .. "battery_charging.png"
+				icon_path .. "charging.png"
 		end
 	end
 

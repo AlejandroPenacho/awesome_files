@@ -1,5 +1,6 @@
 local wibox = require("wibox")
 local naughty = require("naughty")
+local awful = require("awful")
 
 
 local image_dir = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/taglist/"
@@ -28,8 +29,13 @@ local create_taglist = function(screen)
 
 	local taglist = wibox.widget {
 		widget = wibox.layout.fixed.horizontal,
-		spacing = -8,
+		spacing = -1
 	}
+
+	taglist:add(wibox.widget {
+		widget = wibox.widget.imagebox,
+		image = image_dir .. "left.png"
+	})
 
 	for i = 1,9,1
 	do
@@ -39,7 +45,7 @@ local create_taglist = function(screen)
 			if tags[i].selected
 			then
 				image_path = image_dir .. "pressed_button.png"
-				top_margin = 4
+				top_margin = 6
 			else
 				image_path = image_dir .. "unpressed_button.png"
 				top_margin = 2
@@ -58,20 +64,20 @@ local create_taglist = function(screen)
 					left = 8,
 					{
 						widget = wibox.container.background,
-						fg = "#E6AACE",
+						fg = "#333232",
 						{
 							widget = wibox.layout.fixed.horizontal,
 							{
 								text = tags[i].name,
 								valign = "center",
-								font = "sans 9",
+								font = "fira bold 9",
 								opacity = opc,
 								widget = wibox.widget.textbox
 							},
 							{
 								widget = wibox.container.margin,
-								top = 3,
-								bottom = 7 - top_margin,
+								top = 4,
+								bottom = 8 - top_margin,
 								right = 3,
 								left = 4,
 								{
@@ -83,6 +89,7 @@ local create_taglist = function(screen)
 					},
 				}
 			}
+
 			taglist:add(widget)
 
 			widget:connect_signal("button::press",
@@ -94,10 +101,24 @@ local create_taglist = function(screen)
 					if button == 3 then
 						mytagiconmenu:show()
 					end
+
+					if button == 4 then
+						awful.tag.viewprev(tags[i].screen)
+					end
+
+					if button == 5 then
+						awful.tag.viewnext(tags[i].screen)
+					end
 				end
 			)
 		end
 	end
+
+
+	taglist:add(wibox.widget {
+		widget = wibox.widget.imagebox,
+		image = image_dir .. "right.png"
+	})
 
 	return taglist
 end

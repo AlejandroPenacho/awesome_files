@@ -6,34 +6,22 @@ local image_path = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/pomod
 
 local pomodoro = function()
 	local widget = wibox.widget {
-		widget = wibox.layout.stack,
-		{
-			image = image_path .. "base.png",
-			widget = wibox.widget.imagebox
-		},
+		widget = wibox.container.background,
+		shape = function(cr, w, h) gears.shape.rounded_rect(cr,w,h,5) end,
+		bg = "#000000",
+		fg = "#FF0000",
+		shape_border_width = 1,
+		shape_border_color = "#FFFFFF",
 		{
 			widget = wibox.container.margin,
-			top = 2,
-			bottom = 3,
-			left = 2,
+			top = 0,
+			bottom = 0,
+			left = 8,
+			right = 8,
 			{
-				widget = wibox.container.background,
-				shape = function(cr, w, h) gears.shape.rounded_rect(cr,240,h,5) end,
-				bg = "#000000",
-				fg = "#FF0000",
-				shape_border_width = 1,
-				shape_border_color = "#FFFFFF",
-				{
-					widget = wibox.container.margin,
-					top = 0,
-					bottom = 0,
-					left = 6,
-					{
-						id = "pomotext",
-						widget = wibox.widget.textbox,
-						text = "A"
-					}
-				}
+				id = "pomotext",
+				widget = wibox.widget.textbox,
+				text = "A"
 			}
 		}
 	}

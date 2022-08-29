@@ -22,41 +22,71 @@ local create_wibar = function(screen, textclock)
 	local taglist = custom_taglist(screen)
 
 	wibar:setup {
-		widget = wibox.container.margin,
-		bottom = 2,
-		{
-			layout = wibox.layout.align.horizontal,
-			{ 	-- Left widgets
-				id = "left",
-				layout = wibox.layout.fixed.horizontal,
-				spacing = -1,
-				battery_widget(),
-				custom_taglist(screen),
-				pomodoro(),
+		layout = wibox.layout.align.horizontal,
+		{ 	-- Left widgets
+			layout = wibox.layout.fixed.horizontal,
+			spacing = -1,
+			{
+				widget = wibox.container.background,
+				bg = gears.color.create_png_pattern("/home/alejandro/.config/awesome/penacho_mods/png/wibar/background_pattern.png"),
 				{
-					widget = wibox.widget.imagebox,
-					image = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/right_top.png"
+					widget = wibox.layout.fixed.horizontal,
+					id = "left",
+					{
+						widget = wibox.container.margin,
+						margins = 2,
+						battery_widget()
+					},
+					wibox.widget.textbox("   "),
+					custom_taglist(screen),
+					wibox.widget.textbox("   "),
+					{
+						widget = wibox.container.margin,
+						margins = 2,
+						pomodoro(),
+					},
+					wibox.widget.textbox("        ")
 				}
 			},
+			{
+				widget = wibox.widget.imagebox,
+				image = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/right_border.png"
+			}
+		},
 
-			{ -- Center widgets
-				layout = wibox.layout.fixed.horizontal
+		{ -- Center widgets
+			layout = wibox.layout.fixed.horizontal
+		},
+
+		{ -- Right widgets
+			layout = wibox.layout.fixed.horizontal,
+			spacing = -1,
+			{
+				widget = wibox.widget.imagebox,
+				image = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/left_border.png"
 			},
-
-			{ -- Right widgets
-				layout = wibox.layout.fixed.horizontal,
-				spacing = -5,
+			{
+				widget = wibox.container.background,
+				bg = gears.color.create_png_pattern("/home/alejandro/.config/awesome/penacho_mods/png/wibar/background_pattern.png"),
 				{
-					widget = wibox.widget.imagebox,
-					image = "/home/alejandro/.config/awesome/penacho_mods/png/wibar/left_top.png"
-				},
-				my_textclock(),
-				wibox.widget.textbox(" "),
-				my_layout()
-				-- wibox.widget.textbox(" ")
+					layout = wibox.layout.fixed.horizontal,
+					{
+						widget = wibox.container.margin,
+						margins = 2,
+						my_textclock()
+					},
+					wibox.widget.textbox(" "),
+					{
+						widget = wibox.container.margin,
+						margins = 2,
+						my_layout()
+					},
+					wibox.widget.textbox(" ")
+				}
 			}
 		}
 	}
+
 
 	local original_struts = wibar:struts()
 	original_struts["bottom"] = original_struts["bottom"] - 3
@@ -68,7 +98,7 @@ local create_wibar = function(screen, textclock)
 			"property::selected",
 			function(t)
 				wibar:get_children_by_id("left")[1]:set(
-					2,
+					3,
 					custom_taglist(screen)
 				)
 			end
@@ -77,7 +107,7 @@ local create_wibar = function(screen, textclock)
 			"property::icon",
 			function(t)
 				wibar:get_children_by_id("left")[1]:set(
-					2,
+					3,
 					custom_taglist(screen)
 				)
 			end

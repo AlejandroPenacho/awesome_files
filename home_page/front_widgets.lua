@@ -10,6 +10,7 @@ local tags = awful.screen.focused().tags
 local cpu_widget = require("penacho_mods.home_page.cpu")
 local harddrive_widget = require("penacho_mods.home_page.harddrive")
 local ram_widget = require("penacho_mods.home_page.ram")
+local weather_widget = require("penacho_mods.home_page.weather")
 
 local background_box = wibox({
 	widget = wibox.widget {
@@ -20,7 +21,7 @@ local background_box = wibox({
     y = 0,
 	bg="#00000000",
     width = 1366,
-    height = 768,
+    height = 743,
     visible = true
 })
 
@@ -57,6 +58,17 @@ local harddrive_box = wibox({
 	opacity = 1.0
 })
 
+local weather_box = wibox({
+	widget = weather_widget(245,170),
+	x = 920,
+	y = 130,
+	width = 245,
+	height = 170,
+	bg = "#00000000",
+	visible = true,
+	opacity = 1.0
+})
+
 local white_stain = wibox({
 	widget = wibox.widget {
 		widget = wibox.widget.imagebox,
@@ -66,8 +78,8 @@ local white_stain = wibox({
     y = 0,
 	bg="#00000000",
     width = 1366,
-    height = 768,
+    height = 743,
     visible = true
 })
 
-return {background_box, harddrive_box, cpu_box, ram_box, white_stain }
+return {background_box, harddrive_box, cpu_box, ram_box, weather_box, white_stain }

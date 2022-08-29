@@ -16,7 +16,7 @@
   <sodipodi:namedview
      id="namedview7"
      pagecolor="#505050"
-     bordercolor="#ffffff"
+     bordercolor="#333232"
      borderopacity="1"
      inkscape:showpageshadow="0"
      inkscape:pageopacity="0"
@@ -26,10 +26,10 @@
      showgrid="false"
      inkscape:zoom="1.0529882"
      inkscape:cx="46.534235"
-     inkscape:cy="59.354891"
-     inkscape:window-width="1364"
-     inkscape:window-height="744"
-     inkscape:window-x="0"
+     inkscape:cy="60.304569"
+     inkscape:window-width="1918"
+     inkscape:window-height="1176"
+     inkscape:window-x="1366"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -48,7 +48,7 @@
        transform="scale(0.98662814,1.0135531)"><tspan
          sodipodi:role="line"
          id="tspan340"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';fill:#ffffff;fill-opacity:1;stroke-width:0.183995"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code Bold';fill:#333232;fill-opacity:1;stroke-width:0.183995"
          x="-0.094321482"
          y="31.639706">L</tspan></text>
     <text
@@ -60,7 +60,7 @@
        transform="scale(0.98662814,1.0135531)"><tspan
          sodipodi:role="line"
          id="tspan340-6"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';fill:#ffffff;fill-opacity:1;stroke-width:0.183995"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code Bold';fill:#333232;fill-opacity:1;stroke-width:0.183995"
          x="12.16656"
          y="45.324066">T</tspan></text>
     <text
@@ -72,7 +72,7 @@
        transform="scale(0.98662814,1.0135531)"><tspan
          sodipodi:role="line"
          id="tspan340-6-5"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';fill:#ffffff;fill-opacity:1;stroke-width:0.183995"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code Bold';fill:#333232;fill-opacity:1;stroke-width:0.183995"
          x="28.655806"
          y="32.356075">X</tspan></text>
   </g>
