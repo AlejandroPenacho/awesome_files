@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="246mm"
+   height="272mm"
+   viewBox="0 0 246 272"
+   version="1.1"
+   id="svg1470"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   sodipodi:docname="windspeed_unit.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1472"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.35590942"
+     inkscape:cx="420.0507"
+     inkscape:cy="577.3941"
+     inkscape:window-width="1364"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1467">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2397"
+       x="-0.15009602"
+       y="-0.36514137"
+       width="1.300192"
+       height="1.7302827">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.9723382"
+         id="feGaussianBlur2399" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:89.1723px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';letter-spacing:0px;word-spacing:0px;stroke-width:0.334396"
+       x="16.155882"
+       y="110.12135"
+       id="text1628"><tspan
+         sodipodi:role="line"
+         id="tspan1626"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:89.1723px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code Bold';fill:#ff0000;fill-opacity:1;stroke-width:0.334396"
+         x="16.155882"
+         y="110.12135">km/h</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:89.1723px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';letter-spacing:0px;word-spacing:0px;stroke-width:0.334396;fill:#4c0000;fill-opacity:1"
+       x="15.116119"
+       y="222.7711"
+       id="text1628-36"><tspan
+         sodipodi:role="line"
+         id="tspan1626-7"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:89.1723px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code Bold';fill:#4c0000;fill-opacity:1;stroke-width:0.334396"
+         x="15.116119"
+         y="222.7711">m/s</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:70.5556px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583;filter:url(#filter2397)"
+       x="17.329224"
+       y="103.55896"
+       id="text1628-7"
+       transform="matrix(1.2638587,0,0,1.2638587,-5.7457928,-20.762539)"><tspan
+         sodipodi:role="line"
+         id="tspan1626-5"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70.5556px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code Bold';fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="17.329224"
+         y="103.55896">km/h</tspan></text>
+  </g>
+</svg>

@@ -26,6 +26,10 @@ local text_to_screen = function(text)
 			c = "dot"
 		end
 
+		if c == "-" then
+			c = "null"
+		end
+
 		output:add(char_to_screen(c))
 	end
 

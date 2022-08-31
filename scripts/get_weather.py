@@ -37,7 +37,7 @@ def process_current_weather(response):
 
     wind_direction = [
         "N","NE","E","SE","S","SW","W","NW"
-    ] [math.floor(wind_direction_degrees / 45)]
+    ] [math.floor(((wind_direction_degrees+22.5) % 360) / 45)]
 
     return f"{temperature},{wind_speed},{wind_direction},{process_weather_code(weather_code)},"
 

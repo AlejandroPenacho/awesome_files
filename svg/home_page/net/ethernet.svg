@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="260mm"
+   viewBox="0 0 200 260"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   sodipodi:docname="ethernet.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.5264941"
+     inkscape:cx="177.58983"
+     inkscape:cy="597.34762"
+     inkscape:window-width="1908"
+     inkscape:window-height="1046"
+     inkscape:window-x="1372"
+     inkscape:window-y="6"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 159.99991 : 1"
+       inkscape:vp_y="0 : 1000.0002 : 0"
+       inkscape:vp_z="100 : 159.99991 : 1"
+       inkscape:persp3d-origin="50 : 126.66659 : 1"
+       id="perspective5996" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask4986">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.265;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect4988"
+         width="100"
+         height="42.514393"
+         x="0"
+         y="0"
+         ry="0" />
+    </mask>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.6;stroke-dasharray:none;stroke-opacity:1"
+       d="m 149.69922,57.957031 v 2.753906 h 30.89844 l -0.25196,166.537113 -16.00195,-0.0781 -0.0137,2.75391 18.76562,0.0918 0.26172,-172.058589 z"
+       id="path15041" />
+  </g>
+</svg>

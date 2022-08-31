@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.37228755"
-     inkscape:cx="421.71703"
-     inkscape:cy="562.73706"
+     inkscape:zoom="0.5264941"
+     inkscape:cx="461.54363"
+     inkscape:cy="498.58109"
      inkscape:window-width="1366"
      inkscape:window-height="768"
      inkscape:window-x="0"
@@ -6159,7 +6159,9 @@
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';fill:#ff0000;fill-opacity:1"
              id="tspan14198">M</tspan><tspan
              style="font-size:6.35px"
-             id="tspan21151">K</tspan></tspan></text>
+             id="tspan21151">K<tspan
+   style="fill:#ff0000;fill-opacity:1"
+   id="tspan15564">b</tspan></tspan></tspan></text>
     </g>
     <g
        id="g14369-5"
@@ -6471,7 +6473,7 @@
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';fill:#760000;fill-opacity:1"
              id="tspan14198-1">M</tspan><tspan
              style="font-size:6.35px;fill:#ff0000;fill-opacity:1"
-             id="tspan14493">K</tspan></tspan></text>
+             id="tspan14493">Kb</tspan></tspan></text>
     </g>
     <path
        style="color:#000000;fill:none;stroke:#ff0000;stroke-opacity:1;stroke-width:1.6;stroke-dasharray:none"

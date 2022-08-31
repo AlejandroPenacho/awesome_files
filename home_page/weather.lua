@@ -6,15 +6,15 @@ local image_dir = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/we
 local text_to_digital = require("penacho_mods.utils.digital_screen")
 
 local create_widget = function(width,height)
-	local upper_row_height = height * 0.6
+	local upper_row_height = height * 0.55
 
 	local widget = wibox.widget {
 		widget = wibox.layout.fixed.horizontal,
 		id = "upper_row",
 		{
 			widget = wibox.widget.imagebox,
+			forced_width = upper_row_height * 1.2,
 			id = "image",
-			forced_width = 0.5 * width,
 			image = image_dir .. "sun.png",
 		},
 		{
@@ -24,20 +24,20 @@ local create_widget = function(width,height)
 				widget = wibox.layout.fixed.horizontal,
 				id = "temperature_row",
 				forced_height = 0.45 * upper_row_height,
-				text_to_digital("24"),
+				text_to_digital("--.-"),
 				{
-					widget = wibox.widget.textbox,
-					text = "ºC"
+					widget = wibox.widget.imagebox,
+					image = image_dir .. "temp_unit.png"
 				}
 			},
 			{
 				widget = wibox.layout.fixed.horizontal,
 				id = "wind_row",
 				forced_height = 0.45 * upper_row_height,
-				text_to_digital("42"),
+				text_to_digital("--.-"),
 				{
-					widget = wibox.widget.textbox,
-					text = "km/h"
+					widget = wibox.widget.imagebox,
+					image = image_dir .. "windspeed_unit.png"
 				}
 			}
 		}
@@ -47,6 +47,7 @@ local create_widget = function(width,height)
 		"python3 /home/alejandro/.config/awesome/penacho_mods/scripts/get_weather.py",
 		1800,
 		function(l_widget, stdout)
+			
 			local index = 0
 			local temperature = 0
 			local wind_speed = 0
@@ -73,17 +74,18 @@ local create_widget = function(width,height)
 
 			local weather_full_image = image_dir .. weather_image .. ".png"
 
+			--[[ 
 			widget:get_children_by_id("upper_row")[1]:set(
 				1,
 				wibox.widget {
 					widget = wibox.widget.imagebox,
 					image = weather_full_image,
-					-- image = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/weather/clouds3.png",
 					forced_width = 0.5 * width
 				}
 			)
+			]]
 
-			-- widget:get_children_by_id("image")[1].image = image_dir .. weather_image .. ".png"
+			widget:get_children_by_id("image")[1].image = image_dir .. weather_image .. ".png"
 			widget:get_children_by_id("temperature_row")[1]:set(1, text_to_digital(temperature))
 			widget:get_children_by_id("wind_row")[1]:set(1, text_to_digital(wind_speed))
 		end

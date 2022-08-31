@@ -11,6 +11,7 @@ local cpu_widget = require("penacho_mods.home_page.cpu")
 local harddrive_widget = require("penacho_mods.home_page.harddrive")
 local ram_widget = require("penacho_mods.home_page.ram")
 local weather_widget = require("penacho_mods.home_page.weather")
+local net_widget = require("penacho_mods.home_page.net")
 
 local background_box = wibox({
 	widget = wibox.widget {
@@ -59,12 +60,27 @@ local harddrive_box = wibox({
 })
 
 local weather_box = wibox({
-	widget = weather_widget(245,170),
+	--widget = weather_widget(245,170),
+	widget = wibox.widget {
+		widget = wibox.widget.textbox,
+		text = "PLACEHOLDED"
+	},
 	x = 920,
 	y = 130,
 	width = 245,
 	height = 170,
 	bg = "#00000000",
+	visible = true,
+	opacity = 1.0
+})
+
+local net_box = wibox({
+	widget = net_widget(240,312),
+	x = 920,
+	y = 360,
+	width = 240,
+	height = 312,
+	bg = "#000000FF",
 	visible = true,
 	opacity = 1.0
 })
@@ -82,4 +98,12 @@ local white_stain = wibox({
     visible = true
 })
 
-return {background_box, harddrive_box, cpu_box, ram_box, weather_box, white_stain }
+return {
+	background_box,
+	harddrive_box,
+	cpu_box,
+	ram_box,
+	weather_box,
+	net_box,
+	white_stain
+}
