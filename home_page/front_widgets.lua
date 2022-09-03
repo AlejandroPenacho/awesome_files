@@ -60,11 +60,7 @@ local harddrive_box = wibox({
 })
 
 local weather_box = wibox({
-	--widget = weather_widget(245,170),
-	widget = wibox.widget {
-		widget = wibox.widget.textbox,
-		text = "PLACEHOLDED"
-	},
+	widget = weather_widget(245,170),
 	x = 920,
 	y = 130,
 	width = 245,
@@ -80,7 +76,7 @@ local net_box = wibox({
 	y = 360,
 	width = 240,
 	height = 312,
-	bg = "#000000FF",
+	bg = "#00000000",
 	visible = true,
 	opacity = 1.0
 })

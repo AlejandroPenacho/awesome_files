@@ -25,13 +25,13 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.7445751"
-     inkscape:cx="368.66664"
-     inkscape:cy="482.82571"
+     inkscape:cx="466.03761"
+     inkscape:cy="430.44684"
      inkscape:window-width="1908"
      inkscape:window-height="1046"
-     inkscape:window-x="1372"
-     inkscape:window-y="6"
-     inkscape:window-maximized="0"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
@@ -59,15 +59,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="display:inline;fill:#020000;stroke:none;stroke-width:1.29091;stroke-linejoin:bevel;paint-order:markers fill stroke"
-       id="rect5103"
-       width="200.29689"
-       height="260"
-       x="0"
-       y="0"
-       ry="2.3293943"
-       inkscape:label="background" />
     <g
        id="g5769"
        inkscape:label="router"
@@ -78,7 +69,7 @@
          id="path15041"
          transform="matrix(0.37337329,0,0,0.42286617,20.105154,6.6990183)" />
       <rect
-         style="fill:#020000;stroke:#ff0000;stroke-width:0.989009;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         style="fill:none;stroke:#ff0000;stroke-width:0.989009;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          id="rect5712"
          width="52.526478"
          height="21.777744"
@@ -114,9 +105,10 @@
     <g
        id="g10521"
        inkscape:label="pc"
-       transform="matrix(2.3648144,0,0,2.3648144,-1.8298683,-33.259315)">
+       transform="matrix(2.3648144,0,0,2.3648144,-1.8298683,-33.259315)"
+       style="fill:none">
       <rect
-         style="fill:#080000;fill-opacity:1;stroke:#fe0000;stroke-width:0.944675;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         style="fill:none;fill-opacity:1;stroke:#fe0000;stroke-width:0.944675;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          id="rect6064"
          width="67.181847"
          height="16.220852"

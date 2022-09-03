@@ -43,7 +43,7 @@ local create_ram = function(width, height)
 				{
 					widget = wibox.layout.fixed.horizontal,
 					{
-						widget = wibox.widget.imagebox,
+						widget = wibox.widget.imagebox
 						image = image_path .. "4_4_4.png"
 					},
 					{

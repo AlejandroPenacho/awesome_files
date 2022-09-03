@@ -18,4 +18,10 @@ for interface in data:
         received += int(interface[1])
         transmitted += int(interface[2])
 
+    if interface[0] == "enxa0cec8d9a867":
+        eth_connected = 1
+        received += int(interface[1])
+        transmitted += int(interface[2])
+
+
 print(f"{eth_connected},{wifi_connected},{received},{transmitted}")
