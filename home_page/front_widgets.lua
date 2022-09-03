@@ -8,8 +8,8 @@ local text_to_digital = require("penacho_mods.utils.digital_screen")
 local tags = awful.screen.focused().tags
 
 local cpu_widget = require("penacho_mods.home_page.cpu")
-local harddrive_widget = require("penacho_mods.home_page.harddrive")
 local ram_widget = require("penacho_mods.home_page.ram")
+local harddrive_widget = require("penacho_mods.home_page.harddrive")
 local weather_widget = require("penacho_mods.home_page.weather")
 local net_widget = require("penacho_mods.home_page.net")
 
@@ -26,23 +26,23 @@ local background_box = wibox({
     visible = true
 })
 
-local ram_box = wibox({
-	widget = ram_widget(280, 220),
-    x = 245,
-    y = 70,
-    width = 280,
-    height = 170,
-    bg = "#00000000",
-    visible = true,
-	opacity=1.0
-})
-
 local cpu_box = wibox({
 	widget = cpu_widget(220),
     x = 50,
     y = 370,
     width = 220,
     height = 220,
+    bg = "#00000000",
+    visible = true,
+	opacity=1.0
+})
+
+local ram_box = wibox({
+	widget = ram_widget(280, 220),
+    x = 245,
+    y = 70,
+    width = 280,
+    height = 170,
     bg = "#00000000",
     visible = true,
 	opacity=1.0

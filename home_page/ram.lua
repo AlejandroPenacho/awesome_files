@@ -13,7 +13,7 @@ local process_memory = function(kbytes)
 	local megadecabytes = ( kbytes / 1024 ) * 10
 
 	if megadecabytes <= 10240 then
-		return { math.floor(mdecabytes) / 10, "M" }
+		return { math.floor(megadecabytes) / 10, "M" }
 	end
 
 	local gigadecabytes = megadecabytes / 1024
@@ -43,7 +43,7 @@ local create_ram = function(width, height)
 				{
 					widget = wibox.layout.fixed.horizontal,
 					{
-						widget = wibox.widget.imagebox
+						widget = wibox.widget.imagebox,
 						image = image_path .. "4_4_4.png"
 					},
 					{
