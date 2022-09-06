@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="90mm"
+   width="165mm"
    height="272mm"
-   viewBox="0 0 90 272"
+   viewBox="0 0 165 272"
    version="1.1"
    id="svg1470"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.50333193"
-     inkscape:cx="205.62971"
-     inkscape:cy="505.63055"
+     inkscape:cx="-125.16591"
+     inkscape:cy="507.61731"
      inkscape:window-width="1918"
      inkscape:window-height="1056"
      inkscape:window-x="1366"
@@ -71,28 +71,28 @@
        id="rect642"
        width="30.783728"
        height="31.062658"
-       x="30.726524"
+       x="68.297394"
        y="175.15392" />
     <rect
        style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1.04993;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
        id="rect642-3"
        width="30.783728"
        height="31.062658"
-       x="30.726524"
+       x="68.297394"
        y="65.960114" />
     <rect
        style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1.04993;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke;filter:url(#filter1786)"
        id="rect642-6"
        width="30.783728"
        height="31.062658"
-       x="30.726524"
+       x="68.297394"
        y="175.1539" />
     <rect
        style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1.04993;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke;filter:url(#filter1782)"
        id="rect642-3-7"
        width="30.783728"
        height="31.062658"
-       x="30.726524"
+       x="68.297394"
        y="65.960106" />
   </g>
 </svg>

@@ -1,11 +1,11 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local naughty = require("naughty")
+-- local naughty = require("naughty")
 
 local image_dir = "/home/alejandro/.config/awesome/penacho_mods/png/home_page/weather/"
 local text_to_digital = require("penacho_mods.utils.digital_screen")
 
-local create_widget = function(width,height)
+local create_widget = function(_,height)
 	local upper_row_height = height * 0.55
 
 	local widget = wibox.widget {
@@ -46,12 +46,11 @@ local create_widget = function(width,height)
 	awful.widget.watch(
 		"python3 /home/alejandro/.config/awesome/penacho_mods/scripts/get_weather.py",
 		1800,
-		function(l_widget, stdout)
-			
+		function(_, stdout)
 			local index = 0
-			local temperature = 0
-			local wind_speed = 0
-			local wind_direction = 0
+			local temperature = ""
+			local wind_speed = ""
+			local wind_direction = ""
 			local weather_image = "nothing"
 
 			for text in string.gmatch(stdout, "([^,]+)") do
@@ -72,18 +71,13 @@ local create_widget = function(width,height)
 				index = index + 1
 			end
 
-			local weather_full_image = image_dir .. weather_image .. ".png"
+			while #temperature < 4 do
+				temperature = " " .. temperature
+			end
 
-			--[[ 
-			widget:get_children_by_id("upper_row")[1]:set(
-				1,
-				wibox.widget {
-					widget = wibox.widget.imagebox,
-					image = weather_full_image,
-					forced_width = 0.5 * width
-				}
-			)
-			]]
+			while #wind_speed < 4 do
+				wind_speed = " " .. wind_speed
+			end
 
 			widget:get_children_by_id("image")[1].image = image_dir .. weather_image .. ".png"
 			widget:get_children_by_id("temperature_row")[1]:set(1, text_to_digital(temperature))

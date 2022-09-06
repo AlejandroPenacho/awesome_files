@@ -24,15 +24,15 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.1767767"
-     inkscape:cx="483.66104"
-     inkscape:cy="-1190.7678"
-     inkscape:window-width="1908"
-     inkscape:window-height="1046"
-     inkscape:window-x="1372"
-     inkscape:window-y="6"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer2" />
+     inkscape:zoom="0.50000001"
+     inkscape:cx="447.99999"
+     inkscape:cy="424.99999"
+     inkscape:window-width="1366"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2-9" />
   <defs
      id="defs980">
     <filter
@@ -314,19 +314,6 @@
          x="104.40013"
          y="163.58299" />
     </clipPath>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter3570-3"
-       x="-0.19198389"
-       y="-1.218674"
-       width="1.3839678"
-       height="3.437348">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.7175864"
-         id="feGaussianBlur3572-5" />
-    </filter>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath4271-6">
@@ -863,7 +850,7 @@
     <g
        id="g1392-0-1-5"
        inkscape:label="center"
-       transform="matrix(1,0,0,0.85195015,31.679246,-53.154331)">
+       transform="matrix(0.99710094,0,0,1.0333735,32.08367,-87.474659)">
       <rect
          style="fill:#994d00;fill-opacity:1;stroke:#000000;stroke-width:0.65898;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          id="rect1227-3-6-7-9-8-9"
@@ -879,29 +866,12 @@
          x="54.12434"
          y="165.41731" />
       <rect
-         style="fill:#ff9558;fill-opacity:1;stroke:none;stroke-width:0.723;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         style="fill:#b05801;fill-opacity:1;stroke:none;stroke-width:0.566332;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          id="rect1227-3-6-7-6-0-2-28"
-         width="41.792725"
-         height="25.024477"
-         x="54.081398"
-         y="171.13104"
-         transform="matrix(0.98497996,0,0,0.34428458,1.170215,121.95448)" />
-      <rect
-         style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.426818;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-         id="rect2877-9"
-         width="21.471632"
-         height="3.382535"
-         x="64.605263"
-         y="161.46411"
-         ry="1.6912675" />
-      <rect
-         style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.426818;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter3570-3)"
-         id="rect2877-2-7"
-         width="21.471632"
-         height="3.382535"
-         x="64.605263"
-         y="161.46411"
-         ry="1.6912675" />
+         width="41.164997"
+         height="15.588405"
+         x="54.442112"
+         y="165.43257" />
       <text
          xml:space="preserve"
          style="font-size:24.461px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';letter-spacing:0px;word-spacing:0px;fill:#090096;fill-opacity:1;stroke-width:0.286652"

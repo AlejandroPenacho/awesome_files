@@ -32,8 +32,8 @@ local create_net = function(width, height)
 		},
 		{
 			id = "router",
-			point = {x=18, y=40},
-			forced_height = 45,
+			point = {x=20, y=40},
+			forced_height = 42,
 			widget = wibox.layout.fixed.vertical,
 			spacing = 4,
 			{
@@ -128,7 +128,7 @@ local create_net = function(width, height)
 	local total_recv = 0
 	local total_sent = 0
 
-	local update_ip = function(x, stdout)
+	local update_ip = function(_, stdout)
 		local index = 0
 		local internal_ip = ""
 		local external_ip = ""
@@ -142,14 +142,38 @@ local create_net = function(width, height)
 			index = index + 1
 		end
 
-		widget:get_children_by_id("user")[1].widget = text_to_digital(internal_ip)
+		local formatted_internal_ip  = ""
+		local formatted_external_ip  = ""
+
+		for number in string.gmatch(internal_ip, "[0-9]+") do
+			while #number < 3 do
+				number = " " .. number
+			end
+			if #formatted_internal_ip == 0 then
+				formatted_internal_ip = number
+			else
+				formatted_internal_ip = formatted_internal_ip .. "." .. number
+			end
+		end
+		for number in string.gmatch(external_ip, "[0-9]+") do
+			while #number < 3 do
+				number = " " .. number
+			end
+			if #formatted_external_ip == 0 then
+				formatted_external_ip = number
+			else
+				formatted_external_ip = formatted_external_ip .. "." .. number
+			end
+		end
+
+		widget:get_children_by_id("user")[1].widget = text_to_digital(formatted_internal_ip)
 		widget:get_children_by_id("router")[1]:set(
 			2,
-			text_to_digital(external_ip)
+			text_to_digital(formatted_external_ip)
 		)
 	end
 
-	local update_wifi = function(x,stdout)
+	local update_wifi = function(_,stdout)
 		local index = 0
 		local router_name = ""
 		local signal_strength = ""
@@ -182,7 +206,7 @@ local create_net = function(width, height)
 		widget:get_children_by_id("wifi")[1].children[2].widget = text_to_digital(signal_strength .. "%")
 	end
 
-	local update_speed = function(x,stdout)
+	local update_speed = function(_,stdout)
 		local delta_t = 1
 
 		local index = 0

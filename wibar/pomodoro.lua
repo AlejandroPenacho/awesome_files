@@ -46,9 +46,7 @@ local pomodoro = function()
 		}
 	}
 
-	Laweafina = 34
-
-	awful.widget.watch('pomodoro gettime', 1, function(l_widget, stdout)
+	awful.widget.watch('pomodoro gettime', 1, function(_, stdout)
 		if stdout == "Timer not running\n" then
 
 			widget:get_children_by_id("main")[1]:set(
@@ -106,6 +104,9 @@ local pomodoro = function()
 		local time = ""
 		for text in string.gmatch(time_string, "[0-9]+:[0-9]+") do
 			time = text
+		end
+		while #time < 5 do
+			time = " " .. time
 		end
 
 		local play_image = "play.png"
